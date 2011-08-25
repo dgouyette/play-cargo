@@ -1,0 +1,68 @@
+h1. Usage
+
+This module helps you remotely deploy your Play! application.
+
+h1. Roadmap
+
+* 0.1 (current)  only works with Tomcat.
+* 0.2 : add support for jboss and glassfish
+
+
+h2. Installation
+
+First, install the module from the Play! module repository like so: 
+
+bc. play install cargo
+
+
+h2. Prepare your Play! application
+
+Tell Play! that you want your application to use the cargo module by adding it to your @conf/dependencies.yml@ file. It might look like this: 
+
+bc. require:
+	- play
+	- play -> cargop 0.1
+
+
+Now run @play dependencies@ to install the module into your application.
+
+
+h2. Configure remote access
+
+Add the following parameters to your @conf/application.conf@ file
+
+bc. cargo.remote.username=tomcat
+cargo.remote.password=password
+cargo.tomcat.manager.url=http://localhost:8081/manager
+
+Check the user's rights, he must have manager's right. 
+
+See the following exemple  : tomcat-users.xml
+
+bc. <tomcat-users>
+  <role rolename="tomcat"/>
+  <role rolename="admin"/>
+  <role rolename="manager-gui"/>
+ <role rolename="manager"/> 
+ <user username="tomcat" password="tomcat" roles="tomcat,admin,manager,manager-gui"/>
+</tomcat-users>
+
+
+h2. Available commands : 
+
+Remotely deploy your play application
+
+bc. play cargo:deploy
+
+Remotely undeploy your play application
+
+bc. play cargo:undeploy
+
+Remotely redeploy your play application
+
+bc. play cargo:redeploy
+
+
+
+
+
