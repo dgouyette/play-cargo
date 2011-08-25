@@ -5,7 +5,7 @@ This module helps you remotely deploy your Play! application.
 h1. Roadmap
 
 * 0.1 (current)  only works with Tomcat.
-* 0.2 : add support for jboss and glassfish
+* 0.2 : support for jboss and glassfish
 
 
 h2. Installation
@@ -35,9 +35,9 @@ bc. cargo.remote.username=tomcat
 cargo.remote.password=password
 cargo.tomcat.manager.url=http://localhost:8081/manager
 
-Check the user's rights, he must have manager's right. 
+The user's must have manager's rights. 
 
-See the following exemple  : tomcat-users.xml
+See the following example  : tomcat-users.xml
 
 bc. <tomcat-users>
   <role rolename="tomcat"/>
