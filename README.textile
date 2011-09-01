@@ -5,7 +5,6 @@ This module helps you remotely deploy your Play! application.
 h1. Roadmap
 
 * 0.1 (current)  only works with Tomcat.
-* 0.2 : support for jboss and glassfish
 
 
 h2. Installation
@@ -21,7 +20,7 @@ Tell Play! that you want your application to use the cargo module by adding it t
 
 bc. require:
 	- play
-	- play -> cargop 0.1
+	- play -> cargo 0.1
 
 
 Now run @play dependencies@ to install the module into your application.
