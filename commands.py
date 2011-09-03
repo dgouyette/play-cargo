@@ -41,8 +41,7 @@ def execute(**kargs):
     if command == "cargo:redeploy":
         cargo_args.append("redeploy")    
 		
-    print cargo_args
-		
+	
     java_cmd = app.java_cmd(java_args, None, "play.modules.cargo.Cargo", cargo_args)	
     
     try:

@@ -3,3 +3,4 @@ self: play -> cargo 0.1
 require:
     - play
     - org.codehaus.cargo ->cargo-core-container-tomcat 1.1.2
+    - org.codehaus.cargo ->cargo-core-api-generic 1.1.2

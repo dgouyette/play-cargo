@@ -61,7 +61,6 @@ public class Cargo {
         
         //DeployableMonitor monitor;
     	
-        deployer.
         if (command.equals("deploy")){
         	deployer.deploy(war);
         }
